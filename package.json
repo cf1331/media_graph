@@ -17,7 +17,9 @@
   ],
   "dependencies": {
     "jade": "*",
-    "express": "~3.1.0"
+    "express": "~3.1.0",
+	"neo4j": "*",
+	"underscore": "*"
   },
   "noAnalyze": true,
   "license": "Apache",
