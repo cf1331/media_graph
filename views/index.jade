@@ -1,5 +1,9 @@
 extends layout
 
+include mixins/grid
+
 block content
-  h1= title
-  p Welcome to #{title}
+  +row
+    h1.page-header= title
+  +row
+    p Welcome to #{title}

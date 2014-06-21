@@ -1,0 +1,21 @@
+//-
+  Mixins for use in the navbar-side.
+
+//-
+  Formatted sidebar links from an array of link objects.
+  
+  Example link object:
+  { label: "Text to display...", href: "http://example.com", icon: "fa-link", children: [] }
+mixin sidebar_links(links)
+  each link in links
+    li
+      a(href=link.href)
+        if link.icon
+          i.fa.fa-fw(class=link.icon)
+        = ' ' + link.label
+        if link.children
+          span.fa.arrow
+      if link.children
+        ul.nav.nav-second-level
+          +sidebar_links(links.children)
+

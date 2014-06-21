@@ -1,0 +1,14 @@
+//- 
+  Mixins for use in the navbar-header.
+
+
+//-
+  Dropdown icon with custom dropdown block.
+mixin dropdown_custom(iconClass, dropdownClass)
+  li.dropdown
+    a.dropdown-toggle(data-toggle='dropdown', href='#')
+      i.fa.fa-fw(class=iconClass)
+      != ' ' //- Template needs a space between icons, should probably move to css padding.
+      i.fa.fa-caret-down
+    ul.dropdown-menu(class=dropdownClass)
+      block

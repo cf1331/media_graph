@@ -1,0 +1,22 @@
+@import "bootstrap/variables";
+
+/* Fix SB Admin content overflow bug */
+html, body {
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        min-height: 100%;
+    }
+}
+
+/* Fix bootstrap button height bug */
+.btn {
+    height: $input-height-base;
+}
