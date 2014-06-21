@@ -28,6 +28,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
+app.get('/term/:term', routes.index);
 app.get('/data/term/:term', data.term);
 
 http.createServer(app).listen(app.get('port'), function(){

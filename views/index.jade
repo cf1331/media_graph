@@ -4,6 +4,10 @@ include mixins/grid
 
 block content
   +row
-    h1.page-header= title
-  +row
-    p Welcome to #{title}
+    h1.page-header= term
+
+  #graph-container
+
+block append scripts
+  script(src='/js/d3.min.js')
+  script(src='/js/media-graph.js')

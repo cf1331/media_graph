@@ -1,4 +1,5 @@
 @import "bootstrap/variables";
+@import "bootstrap/mixins/vendor-prefixes";
 
 /* Fix SB Admin content overflow bug */
 html, body {
@@ -11,7 +12,7 @@ html, body {
 
 @media(min-width:768px) {
     #page-wrapper {
-        position: inherit;
+        position: relative;
         min-height: 100%;
     }
 }
@@ -19,4 +20,41 @@ html, body {
 /* Fix bootstrap button height bug */
 .btn {
     height: $input-height-base;
+}
+
+/* Graph */
+#graph-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.node {
+    fill: $brand-primary;
+    stroke: #fff;
+    stroke-width: 1.5px;
+    @include transition(fill 1s);
+
+    &.root {
+        fill: #cc0000;
+        @include transition(fill 1s);
+    }
+
+    text {
+        fill: #fff;
+        stroke-width: 0;
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        font-weight: bold;
+        text-anchor: middle;
+        alignment-baseline: middle;
+        text-shadow: 0 0 8px black;
+    }
+}
+
+.link {
+    stroke: $gray-light;
+    stroke-width: 1px;
 }
