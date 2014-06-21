@@ -1,8 +1,9 @@
 
-/*
- * GET home page.
+/**
+ * Application main page.
+ *
  */
-
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+exports.index = function (req, res) {
+    term = req.param('term')
+	res.render('index', { title: term });
 };
