@@ -1,19 +1,22 @@
 {
-  "name": "WebMatrixExpressSite",
+  "name": "MediaGraph",
   "version": "0.2.0",
-  "author": "The WebMatrix Team <webmatrix@microsoft.com>",
-  "description": "A simple boilerplate for building node applications on Windows Azure (or wherever)",
+  "author": {
+    "name": "Andrew Faulks",
+    "email": "aj.faulks@gmail.com"
+  },
+  "description": "A frontend website for displaying graphs of linguistic relationships in the media.",
   "contributors": [
     {
-      "name": "Justin Beckwith",
-      "email": "justbe@microsoft.com"
+      "name": "Nathan Sherburn"
     }
   ],
   "main": "./server.js",
   "keywords": [
-    "azure",
-    "boilerplate",
-    "express"
+    "website",
+    "media",
+    "graph",
+    "linguistic",
   ],
   "dependencies": {
     "jade": "*",
